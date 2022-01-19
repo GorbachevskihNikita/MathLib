@@ -3,7 +3,6 @@
 Vector2f::Vector2f() : _x(0.0f), _y(0.0f) {}
 Vector2f::Vector2f(float x, float y) : _x(x), _y(y) {}
 
-
 Vector2f Vector2f::operator+(const float &scalar) const
 {
     Vector2f sum;
@@ -36,6 +35,13 @@ Vector2f Vector2f::operator/(const float &scalar) const
     diff._y = _y * temp;
     return diff;
 }
+
+std::ostream &operator<<(std::ostream &out, Vector2f vector) {
+    out << "This vector: (" << vector._x << ", " << vector._y << ")" << std::endl;
+    return out;
+}
+
+
 
 
 
